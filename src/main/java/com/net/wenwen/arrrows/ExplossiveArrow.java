@@ -13,7 +13,7 @@ public class ExplossiveArrow extends Arrow {
         super(entityType, level);
     }
     public ExplossiveArrow(Level level, double x, double y, double z) {
-        super(level, x, y, z); // 调用原版 Arrow 自带的坐标构造器
+        super(level, x, y, z);
     }
     public ExplossiveArrow(EntityType<? extends Arrow> entityType, Level level, Arrow originalArrow) {
         super(entityType, level);
