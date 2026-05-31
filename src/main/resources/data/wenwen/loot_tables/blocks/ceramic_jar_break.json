@@ -1,0 +1,144 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "wenwen:chest_key",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "wenwen:tears",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "wenwen:heart_piece",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "wenwen:gold_potato",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "wenwen:totem_break",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "wenwen:gold_carrot",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "wenwen:enmelon",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:netherite_scrap",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_ingot",
+          "weight": 6
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:emerald",
+          "weight": 5
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gold_ingot",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gold_nugget",
+          "weight": 20
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:iron_nugget",
+          "weight": 20
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_apple",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:enchanted_golden_apple",
+          "weight": 1
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:golden_carrot",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:loot_table",
+          "name": "minecraft:gameplay/enchant",
+          "weight": 3,
+          "expand": true
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gunpowder",
+          "weight": 20
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:rotten_flesh",
+          "weight": 40
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:arrow",
+          "weight": 30
+        },
+        {
+          "type": "minecraft:item",
+          "name": "wenwen:totem_break",
+          "weight": 2
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:air",
+          "weight": 160,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 0,
+              "add": false
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:potion",
+          "weight": 4,
+          "functions": [
+            {
+              "function": "minecraft:set_potion",
+              "id": "minecraft:night_vision"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

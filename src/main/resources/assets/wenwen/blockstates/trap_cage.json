@@ -1,0 +1,7 @@
+{
+	"variants": {
+
+		"open=false": {	"model": "wenwen:block/trap_cage" },
+		"open=true": {	"model": "wenwen:block/trap_cage_open" }
+	}
+}

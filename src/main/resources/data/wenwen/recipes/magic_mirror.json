@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "bcb",
+    "cac",
+    "bcb"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:diamond"
+    },
+    "b": {
+      "item": "minecraft:ender_pearl"
+    },
+    "c": {
+      "item": "wenwen:heart_piece"
+    }
+  },
+  "result": {
+    "item": "wenwen:magic_mirror",
+    "count": 1
+  }
+}

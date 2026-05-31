@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "conditions": [
+                {
+                  "condition": "minecraft:match_tool",
+                  "predicate": {
+                    "enchantments": [
+                      {
+                        "enchantment": "minecraft:silk_touch",
+                        "levels": {
+                          "min": 1
+                        }
+                      }
+                    ]
+                  }
+                }
+              ],
+              "type": "minecraft:item",
+              "name": "wenwen:ceramic_jar"
+            },
+            {
+              "type": "minecraft:loot_table",
+              "name": "wenwen:blocks/ceramic_jar_break"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

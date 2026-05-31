@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "wenwen:magic_mirror"
+    },
+    "title": {
+      "translate": "advancements.wenwen.heart_tri_2.title"
+    },
+    "description": {
+      "translate": "advancements.wenwen.heart_tri_2.descr"
+    },
+    "frame": "challenge"
+  },
+  "parent": "wenwen:root",
+  "criteria": {
+    "heart_tri_2": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "wenwen:magic_mirror"
+          ]
+        }
+      }
+    }
+  }
+}

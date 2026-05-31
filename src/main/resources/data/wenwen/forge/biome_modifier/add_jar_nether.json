@@ -1,0 +1,8 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_nether",
+  "features": [
+    "wenwen:jar_cluster_nether"
+  ],
+  "step": "vegetal_decoration"
+}

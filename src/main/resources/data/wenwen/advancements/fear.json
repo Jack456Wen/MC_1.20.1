@@ -1,0 +1,28 @@
+{
+  "display": {
+    "background": "minecraft:textures/block/stone.png",
+    "icon": {
+      "item": "minecraft:dragon_head",
+      "nbt": "{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "advancements.wenwen.fear.title",
+      "fallback": "shudder!"
+    },
+    "description": {
+      "translate": "advancements.wenwen.fear.description",
+      "fallback": "It seems like there's something scary nearby"
+    }
+  },
+  "parent": "wenwen:root",
+  "criteria": {
+    "got_speed": {
+      "trigger": "minecraft:effects_changed",
+      "conditions": {
+        "effects": {
+          "wenwen:fear": {}
+        }
+      }
+    }
+  }
+}

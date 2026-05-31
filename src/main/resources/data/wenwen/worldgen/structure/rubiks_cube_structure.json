@@ -1,0 +1,7 @@
+{
+  "type": "wenwen:rubiks_cube_structure",
+  "biomes": "#wenwen:rubiks_cube_spawn_biomes",
+  "spawn_overrides": {},
+  "step": "surface_structures",
+  "terrain_adaptation": "none"
+}

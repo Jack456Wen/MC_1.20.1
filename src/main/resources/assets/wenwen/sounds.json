@@ -1,0 +1,438 @@
+{
+  "wenwen.heart": {
+    "sounds": [
+      {
+        "name": "wenwen:levelup",
+        "stream": false
+      }
+    ]
+  },
+  "mirror": {
+    "sounds": [
+      {
+        "name": "wenwen:magicmirror",
+        "stream": false
+      }
+    ]
+  },
+  "bow_draw": {
+    "sounds": [
+      {
+        "name": "wenwen:bow_draw",
+        "stream": false
+      }
+    ]
+  },
+  "sword_draw": {
+    "sounds": [
+      {
+        "name": "wenwen:sword_draw",
+        "stream": false
+      }
+    ]
+  },
+  "loading": {
+    "sounds": [
+      {
+        "name": "wenwen:loading",
+        "stream": false
+      }
+    ]
+  },
+  "loading_2": {
+    "sounds": [
+      {
+        "name": "wenwen:loading_2",
+        "stream": false
+      }
+    ]
+  },
+  "loading_3": {
+    "sounds": [
+      {
+        "name": "wenwen:loading_3",
+        "stream": false
+      }
+    ]
+  },
+  "morning": {
+    "sounds": [
+      {
+        "name": "wenwen:morning",
+        "stream": false
+      }
+    ]
+  },
+  "lock_chest": {
+    "category": "block",
+    "subtitle": "wenwen.subtitle.lock_chest",
+    "sounds": [
+      {
+        "name": "wenwen:chest/lock_chest",
+        "stream": false
+      }
+    ]
+  },
+  "jar_break": {
+    "category": "block",
+    "subtitle": "wenwen.subtitle.jar_break",
+    "sounds": [
+      {
+        "name": "wenwen:ceramic/jar_break1",
+        "stream": false
+      },
+      {
+        "name": "wenwen:ceramic/jar_break2",
+        "stream": false
+      },
+      {
+        "name": "wenwen:ceramic/jar_break3",
+        "stream": false
+      },
+      {
+        "name": "wenwen:ceramic/jar_break4",
+        "stream": false
+      }
+    ]
+  },
+  "unlock_chest": {
+    "category": "block",
+    "subtitle": "wenwen.subtitle.unlock_chest",
+    "sounds": [
+      {
+        "name": "wenwen:chest/unlock_chest",
+        "stream": false
+      }
+    ]
+  },
+  "bomb": {
+    "category": "block",
+    "subtitle": "wenwen.subtitle.bomb",
+    "sounds": [
+      {
+        "name": "wenwen:bomb",
+        "stream": false
+      }
+    ]
+  },
+  "christmas": {
+    "sounds": [
+      {
+        "name": "wenwen:christmas",
+        "stream": false
+      }
+    ]
+  },
+  "srg": {
+    "sounds": [
+      {
+        "name": "wenwen:srg",
+        "stream": false
+      }
+    ]
+  },
+  "blunt_draw": {
+    "sounds": [
+      {
+        "name": "wenwen:blunt_draw",
+        "stream": false
+      }
+    ]
+  },
+  "book": {
+    "sounds": [
+      {
+        "name": "wenwen:book",
+        "stream": false
+      }
+    ]
+  },
+  "blunt_swing": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "wenwen:blunt_swing1",
+        "stream": false
+      },
+      {
+        "name": "wenwen:blunt_swing2",
+        "stream": false
+      },
+      {
+        "name": "wenwen:blunt_swing3",
+        "stream": false
+      },
+      {
+        "name": "wenwen:blunt_swing4",
+        "stream": false
+      },
+      {
+        "name": "wenwen:blunt_swing5",
+        "stream": false
+      }
+    ]
+  },
+  "sword_swing": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "wenwen:sword_swing1",
+        "stream": false
+      },
+      {
+        "name": "wenwen:sword_swing2",
+        "stream": false
+      },
+      {
+        "name": "wenwen:sword_swing3",
+        "stream": false
+      },
+      {
+        "name": "wenwen:sword_swing4",
+        "stream": false
+      },
+      {
+        "name": "wenwen:sword_swing5",
+        "stream": false
+      }
+    ]
+  },
+  "danger": {
+    "sounds": [
+      {
+        "name": "wenwen:danger",
+        "stream": false
+      }
+    ]
+  },
+  "danger_2": {
+    "sounds": [
+      {
+        "name": "wenwen:danger_2",
+        "stream": false
+      }
+    ]
+  },
+  "danger_3": {
+    "sounds": [
+      {
+        "name": "wenwen:danger_3",
+        "stream": false
+      }
+    ]
+  },
+  "catch": {
+    "sounds": [
+      {
+        "name": "wenwen:catch",
+        "stream": false
+      }
+    ]
+  },
+  "hunting": {
+    "sounds": [
+      {
+        "name": "wenwen:hunting",
+        "stream": false
+      }
+    ]
+  },
+  "skill": {
+    "sounds": [
+      {
+        "name": "wenwen:skill",
+        "stream": false
+      }
+    ]
+  },
+  "skill_1": {
+    "sounds": [
+      {
+        "name": "wenwen:skill_1",
+        "stream": false
+      }
+    ]
+  },
+
+  "pursue_1": {
+    "sounds": [
+      {
+        "name": "wenwen:pursue_1",
+        "stream": false
+      }
+    ]
+  },
+  "pursue_2": {
+    "sounds": [
+      {
+        "name": "wenwen:pursue_2",
+        "stream": false
+      }
+    ]
+  },
+  "pursue_3": {
+    "sounds": [
+      {
+        "name": "wenwen:pursue_3",
+        "stream": false
+      }
+    ]
+  },
+  "heart_1": {
+    "sounds": [
+      {
+        "name": "wenwen:heart_1",
+        "stream": false
+      }
+    ]
+  },
+  "heart_2": {
+    "sounds": [
+      {
+        "name": "wenwen:heart_2",
+        "stream": false
+      }
+    ]
+  },
+  "heart_3": {
+    "sounds": [
+      {
+        "name": "wenwen:heart_3",
+        "stream": false
+      }
+    ]
+  },
+  "levelup_bell": {
+    "sounds": [
+      {
+        "name": "wenwen:levelup_bell",
+        "stream": false
+      }
+    ]
+  },
+  "zhansha": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "wenwen:zhansha",
+        "stream": false
+      },
+      {
+        "name": "wenwen:zhansha_2",
+        "stream": false
+      }
+    ]
+  },
+  "mirror_break": {
+    "sounds": [
+      {
+        "name": "wenwen:magicmirror_break",
+        "stream": false
+      }
+    ]
+  },
+  "wenwen": {
+    "sounds": [
+      {
+        "name": "wenwen:wenwen",
+        "stream": false
+      }
+    ]
+  },
+  "wenwen1": {
+    "sounds": [
+      {
+        "name": "wenwen:wenwen1",
+        "stream": false
+      }
+    ]
+  },
+  "wenwen2": {
+    "sounds": [
+      {
+        "name": "wenwen:wenwen2",
+        "stream": false
+      }
+    ]
+  },
+  "wenwen3": {
+    "sounds": [
+      {
+        "name": "wenwen:wenwen3",
+        "stream": false
+      }
+    ]
+  },
+  "wenwen4": {
+    "sounds": [
+      {
+        "name": "wenwen:wenwen4",
+        "stream": false
+      }
+    ]
+  },
+  "wudi": {
+    "sounds": [
+      {
+        "name": "wenwen:wudi",
+        "stream": false
+      }
+    ]
+  },
+  "mingdao": {
+    "sounds": [
+      {
+        "name": "wenwen:mingdao",
+        "stream": false
+      }
+    ]
+  },
+  "desert": {
+    "sounds": [
+      {
+        "name": "wenwen:desert",
+        "stream": false
+      }
+    ]
+  },
+  "village_music": {
+    "sounds": [
+      {
+        "name": "wenwen:village_music",
+        "stream": false
+      }
+    ]
+  },
+  "village_music_1": {
+    "sounds": [
+      {
+        "name": "wenwen:village_music_1",
+        "stream": false
+      }
+    ]
+  },
+  "village_music_2": {
+    "sounds": [
+      {
+        "name": "wenwen:village_music_2",
+        "stream": false
+      }
+    ]
+  },
+  "stronghold": {
+    "sounds": [
+      {
+        "name": "wenwen:stronghold",
+        "stream": false
+      }
+    ]
+  },
+  "expdrop": {
+    "sounds": [
+      {
+        "name": "wenwen:exp_drop",
+        "stream": false
+      }
+    ]
+  }
+}

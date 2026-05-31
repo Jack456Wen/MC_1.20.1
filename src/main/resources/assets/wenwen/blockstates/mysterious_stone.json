@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "dimension=overworld": { "model": "wenwen:block/mysterious_stone_overworld" },
+    "dimension=the_nether": { "model": "wenwen:block/mysterious_stone_nether" },
+    "dimension=the_end": { "model": "wenwen:block/mysterious_stone_end" }
+  }
+}

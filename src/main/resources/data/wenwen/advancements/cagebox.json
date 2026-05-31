@@ -1,0 +1,33 @@
+{
+  "display": {
+    "background": "minecraft:textures/block/stone.png",
+    "icon": {
+      "item": "wenwen:trap_cage"
+    },
+    "title": {
+      "translate": "advancements.wenwen.Cagebox.title"
+    },
+    "description": {
+      "translate": "advancements.wenwen.Cagebox.descr"
+    }
+  },
+  "parent": "wenwen:root",
+  "criteria": {
+    "get_box": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "wenwen:trap_cage"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  }
+}

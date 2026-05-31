@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "bab",
+    "aaa",
+    "bab"
+  ],
+  "key": {
+    "a": {
+      "item": "wenwen:heart_piece"
+    },
+    "b": {
+      "item": "wenwen:totem_break"
+    }
+  },
+  "result": {
+    "item": "wenwen:heartcontainer",
+    "count": 1
+  }
+}

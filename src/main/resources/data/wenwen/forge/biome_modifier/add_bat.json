@@ -1,0 +1,21 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#wenwen:rubiks_cube_spawn_biomes",
+  "biome_filter": {
+    "type": "forge:any_of",
+    "negate": true,
+    "values": [
+      "#minecraft:is_ocean",
+      "#minecraft:is_river"
+    ]
+  },
+  "spawners": [
+    {
+    "type": "wenwen:hostilebat",
+    "weight": 40,
+    "minCount": 1,
+    "maxCount": 4
+    }
+  ]
+}
+

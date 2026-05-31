@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "wenwen:rubiks_cube_structure",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 10,
+    "separation": 5,
+    "salt": 123456789
+  }
+}

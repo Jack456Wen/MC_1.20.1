@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "bab",
+    " a "
+  ],
+  "key": {
+    "a": {
+      "item": "wenwen:heart_piece"
+    },
+    "b": {
+      "item": "paraglider:spirit_orb"
+    }
+  },
+  "result": {
+    "item": "minecraft:totem_of_undying",
+    "count": 1
+  }
+}

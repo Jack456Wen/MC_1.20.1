@@ -1,0 +1,33 @@
+{
+  "display": {
+    "background": "minecraft:textures/block/stone.png",
+    "icon": {
+      "item": "wenwen:enmelon"
+    },
+    "title": {
+      "translate": "advancements.wenwen.enmelon.title"
+    },
+    "description": {
+      "translate": "advancements.wenwen.enmelon.descr"
+    }
+  },
+  "parent": "wenwen:root",
+  "criteria": {
+    "get_heart": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "wenwen:enmelon"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  }
+}

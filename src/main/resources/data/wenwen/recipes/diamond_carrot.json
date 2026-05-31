@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:diamond_block"
+    },
+    "b": {
+      "item": "wenwen:gold_carrot"
+    }
+  },
+  "result": {
+    "item": "wenwen:diamond_carrot",
+    "count": 1
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.net.wenwen.mixin",
+  "refmap": "wenwen.refmap.json",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "ItemBreakMixin",
+    "ItemEntityMixin",
+    "LivingEntityMixin",
+    "WitherBossMixin",
+    "EnderDragonMixin",
+    "PlayerMixin",
+    "WardenMixin",
+    "SkeletonMixin"
+  ],
+  "client": [
+    "MinecraftMixin",
+    "MixinTitleScreen",
+    "MixinMusicManager",
+    "FogRendererMixin",
+    "WorldRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

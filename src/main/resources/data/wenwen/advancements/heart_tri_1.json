@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "wenwen:heartcontainer"
+    },
+    "title": {
+      "translate": "advancements.wenwen.heart_tri_1.title"
+    },
+    "description": {
+      "translate": "advancements.wenwen.heart_tri_1.descr"
+    },
+    "frame": "challenge"
+  },
+  "parent": "wenwen:root",
+  "criteria": {
+    "heart_tri_1": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "wenwen:heartcontainer"
+          ]
+        }
+      }
+    }
+  }
+}

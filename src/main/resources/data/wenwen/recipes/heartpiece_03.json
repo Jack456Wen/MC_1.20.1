@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "cac",
+    "aca",
+    "cac"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:diamond"
+    },
+    "c": {
+      "item": "paraglider:spirit_orb"
+    }
+  },
+  "result": {
+    "item": "wenwen:heart_piece",
+    "count": 1
+  }
+}

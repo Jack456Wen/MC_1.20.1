@@ -1,0 +1,24 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:diamond_sword"
+    },
+    "title": {
+      "translate": "advancements.wenwen.bat.title"
+    },
+    "description": {
+      "translate": "advancements.wenwen.bat.description"
+    }
+  },
+  "parent": "wenwen:root",
+  "criteria": {
+    "kill_creeper": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "entity": {
+          "type": "wenwen:hostilebat"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "display": {
+    "icon": {
+      "item": "wenwen:magic_mirror"
+    },
+    "title": {
+      "translate": "advancements.wenwen.mirror_break.title"
+    },
+    "description": {
+      "translate": "advancements.wenwen.mirror_break.descr"
+    },
+    "frame": "challenge"
+  },
+  "parent": "wenwen:root",
+  "criteria": {
+    "magic_mirror_1": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "wenwen:magic_mirror"
+          ]
+        }
+      }
+    }
+  }
+}

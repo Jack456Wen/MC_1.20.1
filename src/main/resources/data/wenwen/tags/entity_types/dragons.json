@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:ender_dragon",
+    "alexscaves:subterranodon",
+    "alexscaves:vallumraptor",
+    "alexscaves:grottoceratops",
+    "alexscaves:tremorsaurus",
+    "alexscaves:relicheirus",
+    "alexscaves:luxtructosaurus",
+    "alexscaves:atlatitan",
+    "iceandfire:fire_dragon",
+    "iceandfire:ice_dragon",
+    "iceandfire:lightning_dragon",
+    "dracolotl:dracolotl",
+    "popularbiology:nailong",
+    "legendary_monsters:skeletosaurus",
+    "legendary_monsters:skeloraptor",
+    "species:wraptor"
+  ]
+}

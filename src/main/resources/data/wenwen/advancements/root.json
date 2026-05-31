@@ -1,0 +1,22 @@
+{
+  "display": {
+    "icon": {
+      "item": "wenwen:gold_potato"
+    },
+    "title": {
+      "translate": "advancements.wenwen.root.title"
+    },
+    "description": {
+      "translate": "advancements.wenwen.root.description"
+    },
+    "background": "minecraft:textures/block/stone.png",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "tick": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}
