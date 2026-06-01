@@ -28,11 +28,11 @@ public abstract class SkeletonMixin {
         Level level = skeleton.level();
         if (!level.isClientSide) {
             AbstractArrow originalArrow = cir.getReturnValue();
-            if (skeleton.getRandom().nextDouble() < 0.08)
+            if (skeleton.getRandom().nextDouble() < 0.025)
             {
                 AbstractArrow explosiveArrow = new ExplossiveArrow(level, originalArrow.getX(), originalArrow.getY(), originalArrow.getZ());
-                explosiveArrow.setBaseDamage(5);
-                explosiveArrow.setKnockback(2);
+                explosiveArrow.setBaseDamage(4);
+                explosiveArrow.setKnockback(10);
                 explosiveArrow.setOwner(skeleton);
                 cir.setReturnValue(explosiveArrow);
             }
@@ -45,10 +45,10 @@ public abstract class SkeletonMixin {
         AbstractSkeleton skeleton=(AbstractSkeleton)(Object)this;
         if(!skeleton.level().isClientSide){
             var r=skeleton.getRandom().nextDouble();
-            if(r<0.16f){
+            if(r<0.12f){
                 living.setRemainingFireTicks(200);
             }
-            if (r < 0.08) {
+            if (r < 0.05) {
                 // 随机选择三个效果之一
                 int effectType = skeleton.getRandom().nextInt(3);
                 switch (effectType) {

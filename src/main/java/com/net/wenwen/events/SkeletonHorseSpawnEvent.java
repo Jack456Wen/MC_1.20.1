@@ -35,7 +35,7 @@ public class SkeletonHorseSpawnEvent {
     public static void onEntityJoinLevel(EntityJoinLevelEvent event) {
         if (event.getLevel().isClientSide()) return;
 
-        int level= WorldStateManager.isWorldUp ? 2 : 1;
+        int level= WorldStateManager.isWorldUp(event.getLevel()) ? 2 : 1;
         //僵尸骑士
         if ((event.getEntity() instanceof Zombie zombie))
         {

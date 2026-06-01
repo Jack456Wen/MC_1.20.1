@@ -238,7 +238,7 @@ public class EntityOctorok extends Squid {
         if (!level.getFluidState(pos).is(FluidTags.WATER)) return false;
 
         if (pos.getY() < 40) return false;
-        if (random.nextFloat() > 0.12f){
+        if (random.nextFloat() > 0.24f){
             return false;
         }
         return true;

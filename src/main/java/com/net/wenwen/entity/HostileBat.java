@@ -77,7 +77,7 @@ public class HostileBat extends Bat {
 
         if (level instanceof ServerLevel serverLevel) {
             long dayTime = serverLevel.dayTime() % 24000;
-            boolean isUp = WorldStateManager.isWorldUp;
+            boolean isUp = WorldStateManager.isWorldUp(serverLevel);
             boolean isDaytime = dayTime < 12000 || dayTime > 13000; // 增加了黄昏/黎明的缓冲期
 
             float spawnChance;
@@ -104,7 +104,7 @@ public class HostileBat extends Bat {
 
     @Override
     public int getExperienceReward() {
-        boolean isUp = WorldStateManager.isWorldUp;
+        boolean isUp = WorldStateManager.isWorldUp(this.level());
         if(!isUp){
             return 50;
         }
@@ -213,7 +213,7 @@ public class HostileBat extends Bat {
                 }
 
                 int randomType = this.bat.getAttackType();
-                boolean isUp = WorldStateManager.isWorldUp;
+                boolean isUp = WorldStateManager.isWorldUp(this.bat.level());
 
                 if(isUp && Config.batAbility){
                     if(randomType < 20){

@@ -59,6 +59,7 @@ import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.entity.player.PlayerWakeUpEvent;
 import net.minecraftforge.event.level.LevelEvent;
+import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -150,15 +151,11 @@ public class WenwenMod {
 	}
 
 	@SubscribeEvent
-	public void onWorldLoad(LevelEvent.Load event) {
-		if (event.getLevel() instanceof ServerLevel serverLevel) {
-			// 只有在世界刚加载的那一瞬间，才去调用那个昂贵的方法
-			WorldState state = WorldStateManager.getState(serverLevel);
-
-			// 刷新内存缓存
-			WorldStateManager.isWorldUp = state.isUp();
-		}
+	public void onServerStarting(ServerStartingEvent event) {
+		WorldStateManager.resetCache();
 	}
+
+
 
 	public void addAttributes(EntityAttributeModificationEvent event) {
 		event.add(EntityType.COW, Attributes.ATTACK_DAMAGE);
@@ -346,6 +343,7 @@ public class WenwenMod {
 	@SubscribeEvent
 	public void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
 		if (event.getEntity() instanceof ServerPlayer player) {
+
 			LocalDate today = LocalDate.now();
 
 			// 判断是否为圣诞节 (12月25日)

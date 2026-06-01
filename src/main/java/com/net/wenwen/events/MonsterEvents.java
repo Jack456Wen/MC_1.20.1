@@ -139,7 +139,7 @@ public class MonsterEvents
         }
         CreeperPower(event.getEntity());
         if(Config.isepic){
-            if(!WorldStateManager.isWorldUp){
+            if(!WorldStateManager.isWorldUp(event.getLevel())){
                 return;
             }
             if (event.getEntity() instanceof LivingEntity living && isScalingMob(living))
@@ -148,7 +148,7 @@ public class MonsterEvents
                     AttributeInstance maxHealth = living.getAttribute(Attributes.MAX_HEALTH);
                     AttributeInstance damage = living.getAttribute(Attributes.ATTACK_DAMAGE);
                     AttributeInstance speed = living.getAttribute(Attributes.MOVEMENT_SPEED);
-                    Player nearestPlayer = EntityUtils.getNearestPlayer(living, 128);
+                    Player nearestPlayer = EntityUtils.getNearestPlayer(living, 96);
                     if (nearestPlayer != null) {
                         // 1. 从玩家的缓存里读取战力 (O(1) 极速读取，不重新算)
                         double power = cachedAttackDamage.getOrDefault(nearestPlayer.getUUID(), 0.0);
@@ -175,7 +175,7 @@ public class MonsterEvents
             }
             return;
         }
-        if(!WorldStateManager.isWorldUp){
+        if(!WorldStateManager.isWorldUp(event.getLevel())){
             return;
         }
         Difficulty level=event.getLevel().getDifficulty();
@@ -263,7 +263,7 @@ public class MonsterEvents
             if (creeper.isPowered()) {
                 return;
             }
-            int level=WorldStateManager.isWorldUp ? 2 : 1;
+            int level=WorldStateManager.isWorldUp(creeper.level()) ? 2 : 1;
             // ④ 按配置的概率，直接设置 powered 状态为 true
             if (Math.random() <= Config.creeper_chance*level) {
                 creeper.getEntityData().set(Creeper.DATA_IS_POWERED,true);
@@ -299,9 +299,9 @@ public class MonsterEvents
 
         if (!player.level().isClientSide() && player instanceof ServerPlayer serverPlayer)
         {
-            if (serverPlayer.tickCount % 100 != 0) return;
+            if (serverPlayer.tickCount % 120 != 0) return;
             UUID uuid = serverPlayer.getUUID();
-            double currentDamage = EntityUtils.calculateTotalPower(serverPlayer);
+            double currentDamage = EntityUtils.calculateTotalPower(serverPlayer,lastCheckedDay);
             Double lastDamage = cachedAttackDamage.get(uuid);
 
             if (lastDamage == null || currentDamage != lastDamage) {
@@ -333,7 +333,7 @@ public class MonsterEvents
                 // 获取并发送消息
                 WorldState state = WorldStateManager.getState(server.overworld());
                 state.setUp(true);
-                WorldStateManager.isWorldUp=true;
+                WorldStateManager.setWorldUp(world,true);
                 String message = eventsForCurrentDifficulty.get(currentDay);
                 sendMessageToWorld(server, message);
             }

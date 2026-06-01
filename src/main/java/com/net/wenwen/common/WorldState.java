@@ -28,7 +28,6 @@ public class WorldState extends SavedData {
         return tag;
     }
 
-    // --- 以下是方便你调用的公共方法 ---
 
     public boolean isUp() {
         return this.isUp;
@@ -38,8 +37,6 @@ public class WorldState extends SavedData {
         // 只有当值真的改变时才更新并标记为脏数据
         if (this.isUp != isUp) {
             this.isUp = isUp;
-            // 这是关键！每次修改数据后，必须调用 setDirty()
-            // 这样 Minecraft 才知道需要把这个新状态保存到硬盘
             this.setDirty();
         }
     }

@@ -16,13 +16,9 @@ import net.minecraft.world.phys.Vec3;
 import javax.annotation.Nullable;
 import java.util.List;
 
-/**
- * @Project: CageBox
- * @Author: cnlimiter
- * @CreateTime: 2025/7/6 00:54
- * @Note:
- */
+
 public class EntityUtils {
+    private static long GamedDay = 1;
     // Self-explanatory
     public static EntityType<?> getEntityTypeFromTag(CompoundTag nbt, @Nullable EntityType<?> alt) {
         if (nbt != null && nbt.contains("EntityTag", 10)) {
@@ -37,7 +33,8 @@ public class EntityUtils {
     /**
      * 计算总战力 (调用这个方法即可)
      */
-    public static double calculateTotalPower(Player player) {
+    public static double calculateTotalPower(Player player,long day) {
+        GamedDay=day;
         // 1. 基础防御生存分 (占比约 60%)
         double survivalScore = calculateSurvivalScore(player);
 
@@ -98,6 +95,22 @@ public class EntityUtils {
         return closestPlayer;
     }
 
+    public static double getCustomGrowth(long day) {
+        if (day <= 0) return 0;
+
+        if (day <= 25) {
+            return day / 25.0;
+        }
+
+        if (day <= 50) {
+            return 1.0 + Math.pow(day - 10, 2) * 0.0025;
+        }
+
+        return 5.0 + Math.pow(day - 50, 2) * 0.002;
+    }
+
+
+
     /**
      * 计算“生存防御”方面的分数
      */
@@ -113,21 +126,21 @@ public class EntityUtils {
 
         // 简化的 EHP 计算公式，考虑了护甲韧性
         double ehp = maxHealth * (1.0 + (armor + armorToughness * 0.4) / 5.0);
-        score += ehp * 1.5; // 每点有效生命值算 1.5 分
+        score += ehp * 1.2; // 每点有效生命值算 1.2 分
 
         // 2. 击退抗性 (防被怪打下悬崖，非常影响生存)
         double knockbackRes = player.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE);
-        score += knockbackRes * 50; // 满抗性加 50 分
+        score += knockbackRes * 8;
 
         // 3. 特殊保命道具判定
         ItemStack offhand = player.getOffhandItem();
         if (offhand.is(Items.TOTEM_OF_UNDYING)) {
-            score += 100; // 图腾极大的提升了容错率，给高分
+            score += 20; // 图腾极大的提升了容错率，给高分
         } else if (offhand.is(Items.SHIELD)) {
-            score += 40;  // 盾牌挡伤能力极强
+            score += 20;  // 盾牌挡伤能力极强
         }
 
-        return score;
+        return score*getCustomGrowth(GamedDay);
     }
 
     /**
@@ -139,30 +152,30 @@ public class EntityUtils {
         // 1. 面板攻击力 (包含武器基础伤害 + 附魔)
         // 原版赤手空拳是 1.0，下界合金剑带锋利5大约是 11.0
         double attackDamage = player.getAttributeValue(Attributes.ATTACK_DAMAGE);
-        score += attackDamage * 5; // 每点攻击力算 5 分
+        score += attackDamage * 2.5; // 每点攻击力算2.5分
 
         // 2. 攻击速度 (攻速快意味着DPS高，但不需要给太高的权重)
         double attackSpeed = player.getAttributeValue(Attributes.ATTACK_SPEED);
         // 原版基础是 4.0，如果变快了（比如 5.0），额外加分
         if (attackSpeed > 4.0) {
-            score += (attackSpeed - 4.0) * 15;
+            score += (attackSpeed - 4.0) * 5;
         }
 
         // 3. 移动速度 (优秀的走位等于防御和输出)
         double moveSpeed = player.getAttributeValue(Attributes.MOVEMENT_SPEED);
         // 原版疾跑是 0.13 左右，如果穿了迅捷靴子会变快
         if (moveSpeed > 0.13) {
-            score += (moveSpeed - 0.13) * 500;
+            score += (moveSpeed - 0.13) * 400;
         }
 
-        return score;
+        return score*getCustomGrowth(GamedDay);
     }
 
     private static double calculateCurioScore(Player player){
         int num=CuriosHelper.getTotalCuriosCount(player);
         double score = 0;
-        score+=num*80f;
-        return score;
+        score+=num*30f;
+        return score*getCustomGrowth(GamedDay);
     }
 
 

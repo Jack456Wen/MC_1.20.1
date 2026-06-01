@@ -10,7 +10,7 @@ public class MonsterGrowthHelper {
 
     private static final double MAX_HEALTH_MULTIPLIER = 500.0;
 
-    private static final double MAX_DAMAGE_MULTIPLIER = 80.0;
+    private static final double MAX_DAMAGE_MULTIPLIER = 50.0;
 
     public static float getHealthMultiplier(double playerPower) {
         if (playerPower <= SAFE_POWER_THRESHOLD) {
@@ -19,7 +19,7 @@ public class MonsterGrowthHelper {
 
         double excessPower = playerPower - SAFE_POWER_THRESHOLD;
 
-        double multiplier = 1.0 + Math.pow(excessPower / 125.0, 1.5);
+        double multiplier = 1.25 + Math.pow(excessPower / 125.0, 1.5);
 
         if (multiplier > MAX_HEALTH_MULTIPLIER) {
             multiplier = MAX_HEALTH_MULTIPLIER;
@@ -29,6 +29,7 @@ public class MonsterGrowthHelper {
     }
 
     public static float getDamageMultiplier(double playerPower) {
+
         if (playerPower <= SAFE_POWER_THRESHOLD) {
             return 1.0f;
         }
@@ -36,7 +37,7 @@ public class MonsterGrowthHelper {
         double excessPower = playerPower - SAFE_POWER_THRESHOLD;
 
         // 伤害增长依然要比血量慢得多（防止被秒杀原则永不变）
-        double multiplier = 1.0 + Math.pow(excessPower / 450.0, 1.2);
+        double multiplier = 1.0 + Math.pow(excessPower / 800.0, 1.2);
 
         if (multiplier > MAX_DAMAGE_MULTIPLIER) {
             multiplier = MAX_DAMAGE_MULTIPLIER;
